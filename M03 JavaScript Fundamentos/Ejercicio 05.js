@@ -8,36 +8,48 @@ function esPositivo(num) {
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
    // Tu código:
-}
+    if (num > 0)
+    {return 'Es positivo'}
+    else if (num < 0)
+    {return 'Es negativo'}
+} console.log(esPositivo (-5))
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
-}
+   return str + '!'
+   } console.log(agregarSimboloExclamacion('hola'))
+   
+ 
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
-}
+   
+   return nombre + ' '+ apellido
+}console.log (combinarNombres('mauricio', 'holgado'))
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
-}
+     return 'hola' +' '+  nombre + '!'
+} console.log(obtenerSaludo('mauricio'))
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
-}
+   return (alto * ancho)
+} console.log(obtenerAreaRectangulo(10,5))
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
-}
+   return (lado+Math.pow (2, ))
+   } console.log(retornarPerimetro(5))
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
