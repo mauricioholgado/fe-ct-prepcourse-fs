@@ -7,14 +7,35 @@ function crearGato(nombre, edad) {
    // La propiedad "meow" será una función que retorne el string: "Meow!".
    // Retornar el objeto.
    // Tu código:
+ let gato = {
+      nombre: nombre,
+      edad: edad,
+      meow : function(){
+         return "Meow!";
+      } 
+ };return gato
 }
+ let ciro = crearGato("ciro",3)
+
+      console.log(ciro.meow())
+ 
+   
+  
+  
+
 
 function nuevoUsuario(nombre, email, password) {
    // Debes crear un nuevo objeto.
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
+   return{
+       nombre,
+       email,
+      password,
+   }
 }
+console.log(nuevoUsuario("gaspi", "gaspi@gmail.com", "abc123"))
 
 function agregarPropiedad(objeto, propiedad) {
    // Recibirás un objeto por parámetro.
@@ -22,20 +43,50 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
-}
+  objeto[propiedad] = null
+ return objeto
+
+}let mipelota ={ accion : "rebotar"};
+console.log(agregarPropiedad(mipelota, "cuero"));
+
+
+
 
 function invocarMetodo(objeto, metodo) {
    // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
+   if (typeof objeto[metodo] === 'function' && objeto.hasOwnProperty (metodo)){
+      objeto[metodo]();
+   }
 }
+   const miobjeto = { 
+      cagar: function ()
+      {
+         console.log( 'prrr')
+      
+      }
+   }
+ invocarMetodo(miobjeto,'cagar')
+   
+    
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
+ 
+let numeroMisterioso = objetoMisterioso.numeroMisterioso
+   return numeroMisterioso * 5  ;
 }
+   const objetoMisterioso ={
+      numeroMisterioso :2
+   }
+;
+
+console.log(multiplicarNumeroDesconocidoPorCinco(objetoMisterioso))
+
 
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
